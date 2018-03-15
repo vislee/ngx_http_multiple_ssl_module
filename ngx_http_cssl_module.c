@@ -1,6 +1,6 @@
 
 /*
- * Copyright (C) leevon@yeah.net
+ * Copyright (C) vislee
  */
 
 #include <ngx_config.h>
