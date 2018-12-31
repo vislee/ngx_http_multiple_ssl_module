@@ -10,15 +10,15 @@ Table of Contents
 * [Install](#install)
 * [Example Configuration](#example-configuration)
 * [Directives](#directives)
-    * [security_rule](#security_rule)
-    * [security_loc_rule](#security_loc_rule)
+    * [multiple_ssl](#multiple_ssl)
+    * [multiple_ssl_cert_path](#multiple_ssl_cert_path)
 * [Author](#author)
 * [Copyright and License](#copyright-and-license)
 
 
 Status
 ======
-The ngx_http_waf_module is currently in active development.
+The module is currently in active development.
 
 Install
 =======
