@@ -1,7 +1,7 @@
 Name
 ====
 
-ngx_http_multiple_ssl_module - Enable Multiple SSL On One IP Using SNI through Virtual Host.
+ngx_http_multiple_ssl_module - Enable Dynamic Load Multiple SSL On Virtual Host Using SNI.
 
 Table of Contents
 =================
@@ -12,6 +12,7 @@ Table of Contents
 * [Directives](#directives)
     * [multiple_ssl](#multiple_ssl)
     * [multiple_ssl_cert_path](#multiple_ssl_cert_path)
+    * [multiple_ssl_servernames](#multiple_ssl_servernames)
 * [Author](#author)
 * [Copyright and License](#copyright-and-license)
 
@@ -42,7 +43,9 @@ Example Configuration
         ssl_certificate_key  cert.key;
 
         multiple_ssl on;
-        multiple_ssl_cert_path /tmp/nginx/conf/;
+        multiple_ssl_cert_path ./conf/;
+        multiple_ssl_servernames *.vis.com vis.com.crt;
+        multiple_ssl_servernames www.vislee.com vis.com.crt;
 
         ssl_session_cache    shared:SSL:1m;
         ssl_session_timeout  5m;
@@ -68,26 +71,40 @@ multiple_ssl
 
 **context:** *server*
 
+Enable Dynamic load multiple certificates.
+
 multiple_ssl_cert_path
 ----------------------
 **syntax:** *multiple_ssl_cert_path path*
 
 **default:** *no*
 
+**context:** *http,server*
+
+Specify the certificate path.
+
+  The default cert file format:
+
+  ```
+
+  hostname.crt
+
+  hostname.key
+
+  ```
+
+multiple_ssl_servernames
+------------------------
+**syntax:** *multiple_ssl_servernames servername crt*
+
+**default:** *no*
+
 **context:** *server*
 
-  cert file format:
-
-  ```
-
-  hostname.cert.der
-
-  hostname.key.der
-
-  ```
-
+Specify the mapping of servername and certificate.
 
 [Back to TOC](#table-of-contents)
+
 
 Author
 ======
