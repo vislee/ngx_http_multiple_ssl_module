@@ -10,6 +10,7 @@ addons:
     packages:
       - cpanminus
       - lcov
+      - perl-IO-Socket-SSL
 
 install:
   - gem install coveralls-lcov
