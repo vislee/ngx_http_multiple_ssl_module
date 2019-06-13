@@ -29,6 +29,7 @@ script:
   - ls -ltra
   - ./auto/configure --prefix=/tmp/nginx --with-http_ssl_module
     --add-module=../ngx_http_multiple_ssl_module
+    --with-openssl=../openssl/
     --with-cc-opt="-Wno-unused-result -fprofile-arcs -ftest-coverage" --with-ld-opt="-lgcov"
   - make -j
   - make install
