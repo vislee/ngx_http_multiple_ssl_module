@@ -43,4 +43,5 @@ script:
 
 after_success:
   - coveralls-lcov ./coverage.info
-  - genhtml -s -o /tmp/ipdb_html coverage.info
+  - genhtml -s -o /tmp/multiple_ssl_html coverage.info
+  - ls -ltra /tmp/multiple_ssl_html
