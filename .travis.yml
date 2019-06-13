@@ -10,7 +10,6 @@ addons:
     packages:
       - cpanminus
       - lcov
-      - libjson-c-dev
 
 install:
   - gem install coveralls-lcov
@@ -44,5 +43,4 @@ script:
 
 after_success:
   - coveralls-lcov ./coverage.info
-  - genhtml -s -o /tmp/multissl_html coverage.info
-  - ls -ltra /tmp/multissl_html/
+  - genhtml -s -o /tmp/ssl_html coverage.info
