@@ -1,6 +1,9 @@
 Name
 ====
 
+[![Build Status](https://travis-ci.org/vislee/ngx_http_multiple_ssl_module.svg?branch=master)](https://travis-ci.org/vislee/ngx_http_multiple_ssl_module)
+[![Coverage Status](https://coveralls.io/repos/github/vislee/ngx_http_multiple_ssl_module/badge.svg?branch=master)](https://coveralls.io/github/vislee/ngx_http_multiple_ssl_module?branch=master)
+
 ngx_http_multiple_ssl_module - Enable Dynamic Load Multiple SSL On Virtual Host Using SNI.
 
 Table of Contents
