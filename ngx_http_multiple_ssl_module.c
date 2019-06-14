@@ -291,14 +291,14 @@ ngx_http_multiple_ssl_cert_handler(ngx_ssl_conn_t *ssl_conn, int *ad, void *arg)
     ngx_log_debug1(NGX_LOG_DEBUG_HTTP, c->log, 0, "multiple ssl key %V", &key);
 
     if (0 != access((const char *)cert.data, F_OK|R_OK)) {
-        ngx_log_debug1(NGX_LOG_WARN, c->log, 0,
+        ngx_log_error(NGX_LOG_WARN, c->log, 0,
             "multiple ssl cert [%V] not exists or not read", &cert);
 
         return SSL_TLSEXT_ERR_NOACK;
     }
 
     if (0 != access((const char *)key.data, F_OK|R_OK)) {
-        ngx_log_debug1(NGX_LOG_WARN, c->log, 0,
+        ngx_log_error(NGX_LOG_WARN, c->log, 0,
             "multiple ssl key [%V] not exists or not read", &key);
 
         return SSL_TLSEXT_ERR_NOACK;
