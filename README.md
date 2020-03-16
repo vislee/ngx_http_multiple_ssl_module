@@ -22,7 +22,15 @@ Table of Contents
 
 Status
 ======
-The module is currently in active development.
+The module was scrapped, Because nginx already supports it.
+
+```nginx
+
+ssl_certificate ${host}.rsa.crt;
+ssl_certificate_key ${host}.rsa.key;
+
+```
+
 
 Install
 =======
