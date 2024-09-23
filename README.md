@@ -26,8 +26,8 @@ The module was scrapped, Because nginx already supports it.
 
 ```nginx
 
-ssl_certificate ${host}.rsa.crt;
-ssl_certificate_key ${host}.rsa.key;
+ssl_certificate $ssl_server_name.crt;
+ssl_certificate_key $ssl_server_name.key;
 
 ```
 
